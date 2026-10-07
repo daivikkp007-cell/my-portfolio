@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>Software Engineer Portfolio | Daivik K P</title>
+  <meta name="description"
+    content="Portfolio of a software engineer specializing in scalable systems, modern web development, and clean software architecture.">
+  <meta name="author" content="Daivik K P">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:title" content="Software Engineer Portfolio | Daivik K P">
+  <meta property="og:description"
+    content="Explore projects, technical skills, career timeline, and contact information.">
+  <meta property="og:type" content="website">
+
+  <!-- Typography: Pixel Art Fonts & Modern Sans/Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet Reference (Vanilla CSS) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Screen Reader Accessible Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to Main Content</a>
+
+  <!-- ==========================================================================
+       MOBILE TOP BAR (Visible on screens < 1024px)
+       Provides mobile menu toggle, brand logo, and night mode switch
+       ========================================================================== -->
+  <header class="mobile-top-bar" id="mobile-top-bar">
+    <button type="button" class="pixel-menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu"
+      aria-expanded="false" aria-controls="vertical-navbar">
+      <span class="pixel-hamburger-box" aria-hidden="true">
+        <span class="pixel-hamburger-inner"></span>
+      </span>
+      <span class="pixel-menu-text">MENU</span>
+    </button>
+
+    <a href="#hero" class="brand-logo pixel-brand mobile-brand" aria-label="Portfolio Home">
+      <span class="logo-bracket">&lt;</span><span class="logo-name">DAIVIK.DEV</span><span
+        class="logo-bracket">/&gt;</span>
+    </a>
+
+    <!-- Mobile Theme Toggle -->
+    <div class="mobile-theme-wrapper">
+      <button type="button" class="pixel-theme-btn mobile-theme-btn" id="mobile-theme-toggle-btn"
+        aria-label="Toggle night mode" title="Toggle Night / Day Mode">
+        <span class="theme-icon sun-icon" aria-hidden="true">&#9728;</span>
+        <span class="theme-icon moon-icon" aria-hidden="true">&#9790;</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       LEFT VERTICAL NAVIGATION BAR
+       Pixel art styled sidebar docked on the left (Desktop) / Slide-out drawer (Mobile)
+       ========================================================================== -->
+  <aside class="vertical-navbar" id="vertical-navbar" aria-label="Sidebar Navigation">
+    <div class="sidebar-inner">
+      <!-- Sidebar Header / Player Identity -->
+      <div class="sidebar-header">
+        <a href="#hero" class="brand-logo pixel-brand sidebar-brand" aria-label="Portfolio Home">
+          <span class="logo-bracket">&lt;</span><span class="logo-name">DAIVIK.DEV</span><span
+            class="logo-bracket">/&gt;</span>
+        </a>
+        <div class="sidebar-status-badge">
+          <span class="blinking-led" aria-hidden="true">●</span>
+          <span class="status-label">PLAYER 1: ONLINE</span>
+        </div>
+        <button type="button" class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close navigation menu">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- Navigation Links: Home, About Me, Skills, Timeline, Projects, Testimonials, Chat, Contact -->
+      <nav class="sidebar-nav" id="sidebar-nav" aria-label="Main Navigation">
+        <div class="sidebar-nav-label">// NAVIGATION_MENU</div>
+        <ul class="vertical-nav-list">
+          <li class="vertical-nav-item">
+            <a href="#hero" class="vertical-nav-link active" id="nav-link-hero" aria-current="page">
+              <span class="nav-marker" aria-hidden="true">&#9654;</span>
+              <span class="nav-icon-badge" aria-hidden="true">[01]</span>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+          <li class="vertical-nav-item">
+            <a href="#about" class="vertical-nav-link" id="nav-link-about">
+              <span class="nav-marker" aria-hidden="true">&#9654;</span>
+              <span class="nav-icon-badge" aria-hidden="true">[02]</span>
+              <span class="nav-text">About Me</span>
+            </a>
+          </li>
+          <li class="vertical-nav-item">
+            <a href="#skills" class="vertical-nav-link" id="nav-link-skills">
+              <span class="nav-marker" aria-hidden="true">&#9654;</span>
+              <span class="nav-icon-badge" aria-hidden="true">[03]</span>
+              <span class="nav-text">Skills</span>
+            </a>
+          </li>
+          <li class="vertical-nav-item">
+            <a href="#timeline" class="vertical-nav-link" id="nav-link-timeline">
+              <span class="nav-marker" aria-hidden="true">&#9654;</span>
+              <span class="nav-icon-badge" aria-hidden="true">[04]</span>
+              <span class="nav-text">Timeline</span>
+            </a>
+          </li>
+          <li class="vertical-nav-item">
+            <a href="#projects" class="vertical-nav-link" id="nav-link-projects">
+              <span class="nav-marker" aria-hidden="true">&#9654;</span>
+              <span class="nav-icon-badge" aria-hidden="true">[05]</span>
+              <span class="nav-text">Projects</span>
+            </a>
+          </li>
+          <li class="vertical-nav-item">
+            <a href="#testimonials" class="vertical-nav-link" id="nav-link-testimonials">
+              <span class="nav-marker" aria-hidden="true">&#9654;</span>
+              <span class="nav-icon-badge" aria-hidden="true">[06]</span>
+              <span class="nav-text">Testimonials</span>
+            </a>
+          </li>
+          <li class="vertical-nav-item">
+            <a href="#chat" class="vertical-nav-link" id="nav-link-chat">
+              <span class="nav-marker" aria-hidden="true">&#9654;</span>
+              <span class="nav-icon-badge" aria-hidden="true">[07]</span>
+              <span class="nav-text">Chat</span>
+            </a>
+          </li>
+          <li class="vertical-nav-item">
+            <a href="#contact" class="vertical-nav-link" id="nav-link-contact">
+              <span class="nav-marker" aria-hidden="true">&#9654;</span>
+              <span class="nav-icon-badge" aria-hidden="true">[08]</span>
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Sidebar Footer / Controls -->
+      <div class="sidebar-footer">
+        <div class="theme-switch-wrapper sidebar-theme-switch" id="theme-switch-container">
+          <button type="button" id="theme-toggle-btn" class="pixel-theme-btn sidebar-theme-btn"
+            aria-label="Toggle night mode" aria-pressed="false" title="Toggle Night / Day Mode">
+            <span class="pixel-btn-border-corner top-left"></span>
+            <span class="pixel-btn-border-corner top-right"></span>
+            <span class="pixel-btn-border-corner bottom-left"></span>
+            <span class="pixel-btn-border-corner bottom-right"></span>
+            <span class="theme-icon sun-icon" aria-hidden="true">&#9728;</span>
+            <span class="theme-icon moon-icon" aria-hidden="true">&#9790;</span>
+            <span class="pixel-mode-label" id="theme-mode-label">THEME: <span
+                class="current-mode-text">AUTO</span></span>
+          </button>
+        </div>
+        <div class="sidebar-system-info">
+          <span class="sys-build">SYSTEM v2.6 // PIXEL UI</span>
+          <span class="sys-hp-tag">HP: 100% | EXP: 95%</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN PAGE LAYOUT (Offset on desktop for left vertical navbar)
+       ========================================================================== -->
+  <div class="site-layout" id="site-layout">
+
+    <!-- ========================================================================
+         MAIN CONTENT
+         ======================================================================== -->
+    <main id="main-content">
+
+      <!-- ======================================================================
+         SECTION: HERO (PIXEL ART STYLE)
+         Features provided background picture, pixel dialogue HUD, welcome title,
+         brief tagline, player stats, and retro call-to-actions.
+         ====================================================================== -->
+      <section class="section hero-section pixel-hero" id="hero" aria-labelledby="hero-title">
+        <!-- Ambient pixel scanline & vignette overlay -->
+        <div class="pixel-scanlines" aria-hidden="true"></div>
+
+        <div class="container hero-container">
+          <!-- Pixel Dialogue Window / Quest Box -->
+          <div class="pixel-box hero-dialog-box">
+            <!-- Pixel Window Titlebar -->
+            <div class="pixel-box-titlebar">
+              <div class="pixel-window-controls" aria-hidden="true">
+                <span class="pixel-dot dot-red"></span>
+                <span class="pixel-dot dot-yellow"></span>
+                <span class="pixel-dot dot-green"></span>
+              </div>
+              <span class="pixel-window-title">QUEST_LOG // VISITOR_GREETING.EXE</span>
+              <span class="pixel-system-status"><span class="blinking-led">●</span> ONLINE</span>
+            </div>
+
+            <!-- Pixel RPG Player Stats Bar -->
+            <div class="pixel-hud-stats" aria-label="Player Stats">
+              <div class="hud-item">
+                <span class="hud-label">LVL:</span>
+                <span class="hud-value hud-badge">99</span>
+              </div>
+              <div class="hud-item">
+                <span class="hud-label">CLASS:</span>
+                <span class="hud-value">SOFTWARE_ENGINEER</span>
+              </div>
+              <div class="hud-item hud-bar-item">
+                <span class="hud-label">HP:</span>
+                <div class="pixel-bar pixel-bar-hp" title="Health Points 100/100">
+                  <div class="pixel-bar-fill hp-fill"></div>
+                </div>
+                <span class="hud-bar-text">100/100</span>
+              </div>
+              <div class="hud-item hud-bar-item">
+                <span class="hud-label">EXP:</span>
+                <div class="pixel-bar pixel-bar-exp" title="Experience 95%">
+                  <div class="pixel-bar-fill exp-fill"></div>
+                </div>
+                <span class="hud-bar-text">MAX</span>
+              </div>
+            </div>
+
+            <!-- Hero Content: Welcome Title & Tagline -->
+            <div class="hero-content">
+              <div class="pixel-welcome-banner">
+                <span class="pixel-star" aria-hidden="true">&#9733;</span>
+                <span>WELCOME, ADVENTURER!</span>
+                <span class="pixel-star" aria-hidden="true">&#9733;</span>
+              </div>
+
+              <!-- Single H1 Title -->
+              <h1 class="hero-title pixel-font" id="hero-title">DAIVIK K P</h1>
+
+              <!-- Brief Tagline -->
+              <p class="hero-tagline pixel-tagline">
+                Software Engineer crafting scalable full-stack applications &amp; pixel-perfect user experiences.<span
+                  class="pixel-cursor" aria-hidden="true">&#9608;</span>
+              </p>
+
+              <p class="hero-lore-text">
+                Equipped with deep problem-solving skills, robust clean code patterns, and modern architecture. Turning
+                complex ideas into elegant solutions.
+              </p>
+
+              <!-- Retro Pixel Action Buttons -->
+              <div class="hero-cta-group pixel-cta-group">
+                <a href="#projects" class="pixel-btn pixel-btn-primary" id="cta-view-projects">
+                  <span class="pixel-btn-icon">&#9654;</span> VIEW PROJECTS
+                </a>
+                <a href="#contact" class="pixel-btn pixel-btn-secondary" id="cta-contact-me">
+                  <span class="pixel-btn-icon">&#9993;</span> CONTACT ME
+                </a>
+                <a href="daivikkp resume.pdf" class="pixel-btn pixel-btn-accent" id="cta-download-resume" download>
+                  <span class="pixel-btn-icon">&#10515;</span> DOWNLOAD CV
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pixel Character Frame / Avatar Showcase -->
+          <div class="hero-media pixel-avatar-section">
+            <div class="pixel-portrait-frame">
+              <div class="pixel-frame-corners">
+                <span class="corner c-tl"></span>
+                <span class="corner c-tr"></span>
+                <span class="corner c-bl"></span>
+                <span class="corner c-br"></span>
+              </div>
+              <div class="pixel-portrait-header">
+                <span class="pixel-portrait-label">[PLAYER 1: DAIVIK]</span>
+              </div>
+              <div class="portrait-img-wrapper">
+                <img src="daivikkp prof picture.jpeg" alt="Daivik K P - Software Engineer"
+                  class="profile-avatar pixel-avatar-img" id="profile-avatar" loading="eager">
+                <div class="pixel-portrait-overlay" aria-hidden="true"></div>
+              </div>
+              <div class="pixel-portrait-footer">
+                <span class="status-tag ready-tag">&#9679; READY FOR ACTION</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         SECTION: ABOUT
+         Personal background, pixel-art avatar, bio narrative, career highlights,
+         and personal interests
+         ====================================================================== -->
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag-label">// CHARACTER_PROFILE</span>
+            <h2 class="section-title" id="about-title">About Me</h2>
+            <p class="section-subtitle">A glimpse into my engineering journey, problem-solving mindset, and personal
+              interests.</p>
+          </div>
+
+          <div class="about-container">
+            <!-- Left Column: Minimalist Avatar Card & Quick Coordinates -->
+            <div class="about-profile-card pixel-box">
+              <div class="pixel-box-titlebar">
+                <span class="pixel-window-title">DEV_CARD.DAT</span>
+                <span class="pixel-system-status"><span class="blinking-led">&#9679;</span> ACTIVE</span>
+              </div>
+
+              <div class="about-avatar-wrapper">
+                <img src="pixel_avatar.jpg" alt="Daivik Gowda - Pixel Art Software Engineer Avatar"
+                  class="about-pixel-avatar" id="about-avatar-img">
+                <div class="avatar-tag-overlay" id="avatar-tag-overlay">[16-BIT DEVELOPER]</div>
+              </div>
+
+              <div class="about-quick-details">
+                <h3 class="about-dev-name">Daivik Gowda</h3>
+                <p class="about-dev-title">Software Engineer &amp; CS/DS Student</p>
+
+                <ul class="about-meta-list">
+                  <li class="about-meta-item">
+                    <span class="meta-label">Location:</span>
+                    <span class="meta-value">Karnataka, India</span>
+                  </li>
+                  <li class="about-meta-item">
+                    <span class="meta-label">Degree:</span>
+                    <span class="meta-value">B.E. Computer Science &amp; DS</span>
+                  </li>
+                  <li class="about-meta-item">
+                    <span class="meta-label">Status:</span>
+                    <span class="meta-value status-badge-avail">&#9679; Open to Opportunities</span>
+                  </li>
+                </ul>
+
+                <div class="about-avatar-actions">
+                  <button type="button" class="pixel-btn pixel-btn-secondary avatar-toggle-btn" id="avatar-toggle-btn"
+                    title="Toggle between Pixel Art and Real Photo">
+                    <span class="pixel-btn-icon">&#8635;</span> SWITCH AVATAR
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Narrative Bio, Career Highlights, and Personal Interests -->
+            <div class="about-content-column">
+              <!-- Short Bio Article -->
+              <article class="about-bio-card pixel-box">
+                <h3 class="about-card-title"><span class="title-bracket">&gt;</span> Who I Am</h3>
+                <p class="about-bio-text">
+                  I am a dedicated software engineer pursuing a Bachelor of Engineering in <strong>Computer Science and
+                    Data Science</strong> at Adichunchanagiri Institute of Technology. I specialize in designing robust
+                  backend architectures, dynamic user interfaces, and systems-level algorithms.
+                </p>
+                <p class="about-bio-text">
+                  With a strong command of <strong>Java, C, Python, JavaScript, and Node.js</strong>, I enjoy taking
+                  projects from ideation to implementation. Whether crafting responsive web apps or implementing
+                  low-level embedded logic, my focus remains on writing clean, scalable, and well-tested code.
+                </p>
+              </article>
+
+              <!-- Career Highlights Grid -->
+              <div class="about-highlights-card pixel-box">
+                <h3 class="about-card-title"><span class="title-bracket">&gt;</span> Career &amp; Academic Highlights
+                </h3>
+                <div class="highlights-grid">
+                  <div class="highlight-box">
+                    <span class="highlight-icon">&#127891;</span>
+                    <div class="highlight-info">
+                      <strong class="highlight-heading">CS &amp; Data Science</strong>
+                      <p class="highlight-desc">Undergraduate engineering student with solid foundations in DSA, DBMS,
+                        and OS.</p>
+                    </div>
+                  </div>
+
+                  <div class="highlight-box">
+                    <span class="highlight-icon">&#9889;</span>
+                    <div class="highlight-info">
+                      <strong class="highlight-heading">Adaptive Systems</strong>
+                      <p class="highlight-desc">Architected an automated adaptive headlight safety prototype built with
+                        C for night driving.</p>
+                    </div>
+                  </div>
+
+                  <div class="highlight-box">
+                    <span class="highlight-icon">&#127760;</span>
+                    <div class="highlight-info">
+                      <strong class="highlight-heading">Full-Stack Capability</strong>
+                      <p class="highlight-desc">Hands-on experience in building modern web applications with Node.js,
+                        MySQL, and responsive CSS.</p>
+                    </div>
+                  </div>
+
+                  <div class="highlight-box">
+                    <span class="highlight-icon">&#128640;</span>
+                    <div class="highlight-info">
+                      <strong class="highlight-heading">Continuous Delivery</strong>
+                      <p class="highlight-desc">Committed to version control workflows, agile development, and writing
+                        maintainable code.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Personal Interests & Passions -->
+              <div class="about-interests-card pixel-box">
+                <h3 class="about-card-title"><span class="title-bracket">&gt;</span> Personal Interests &amp; Passions
+                </h3>
+                <div class="interests-tags">
+                  <div class="interest-pill">
+                    <span class="interest-icon">&#128377;</span>
+                    <span class="interest-label">Retro Gaming &amp; Pixel Art</span>
+                  </div>
+                  <div class="interest-pill">
+                    <span class="interest-icon">&#127950;</span>
+                    <span class="interest-label">Embedded &amp; Automotive Tech</span>
+                  </div>
+                  <div class="interest-pill">
+                    <span class="interest-icon">&#129504;</span>
+                    <span class="interest-label">Algorithm Challenges</span>
+                  </div>
+                  <div class="interest-pill">
+                    <span class="interest-icon">&#128736;</span>
+                    <span class="interest-label">Open Source Tooling</span>
+                  </div>
+                  <div class="interest-pill">
+                    <span class="interest-icon">&#128218;</span>
+                    <span class="interest-label">Data Science &amp; AI Tech</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         SECTION: SKILLS
+         Categorized technical competencies & interactive RPG skill arsenal
+         ====================================================================== -->
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag-label">// CHARACTER_ABILITIES</span>
+            <h2 class="section-title" id="skills-title">Technical Skills</h2>
+            <p class="section-subtitle">Core engineering competencies, languages, frameworks, and developer tools in my
+              arsenal.</p>
+          </div>
+
+          <!-- Interactive Category Filter Tabs -->
+          <div class="skills-filter-tabs" role="tablist" aria-label="Skills Category Filters">
+            <button type="button" class="pixel-tab-btn active" role="tab" aria-selected="true" data-filter="all">
+              <span class="tab-indicator">&#9654;</span> ALL ARSENAL
+            </button>
+            <button type="button" class="pixel-tab-btn" role="tab" aria-selected="false" data-filter="languages">
+              <span class="tab-indicator">&#9654;</span> LANGUAGES
+            </button>
+            <button type="button" class="pixel-tab-btn" role="tab" aria-selected="false" data-filter="frontend">
+              <span class="tab-indicator">&#9654;</span> FRONTEND
+            </button>
+            <button type="button" class="pixel-tab-btn" role="tab" aria-selected="false" data-filter="backend">
+              <span class="tab-indicator">&#9654;</span> BACKEND &amp; DB
+            </button>
+            <button type="button" class="pixel-tab-btn" role="tab" aria-selected="false" data-filter="tools">
+              <span class="tab-indicator">&#9654;</span> CS &amp; TOOLS
+            </button>
+          </div>
+
+          <!-- Skills Categories Grid -->
+          <div class="skills-grid" id="skills-grid">
+
+            <!-- ==================================================================
+               CATEGORY 1: PROGRAMMING LANGUAGES
+               Represents primary coding languages for system-level logic, backend,
+               and general software development.
+               ================================================================== -->
+            <article class="skill-category-card pixel-box" data-category="languages">
+              <div class="pixel-box-titlebar">
+                <span class="pixel-window-title">CATEGORY // CORE_LANGUAGES.EXE</span>
+                <span class="pixel-system-status"><span class="blinking-led">&#9679;</span> READY</span>
+              </div>
+
+              <div class="category-card-body">
+                <h3 class="category-title">Programming Languages</h3>
+                <p class="category-desc">Foundational programming languages used for systems engineering and application
+                  logic.</p>
+
+                <div class="skills-list">
+                  <!-- Skill: Java (Represents Object-Oriented Programming, enterprise architecture, and strong typing) -->
+                  <div class="skill-item" data-skill="java">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[JAVA]</span>
+                      <strong class="skill-name">Java</strong>
+                      <span class="skill-level-badge">LVL 88</span>
+                    </div>
+                    <div class="pixel-progress-track" title="Java Proficiency: 88%">
+                      <div class="pixel-progress-fill fill-cyan" style="--skill-pct: 88%;"></div>
+                    </div>
+                    <div class="skill-footer-note">OOP, Collections, Robust Architecture</div>
+                  </div>
+
+                  <!-- Skill: C (Represents low-level systems programming, pointers, and embedded automotive prototype) -->
+                  <div class="skill-item" data-skill="c">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[C_LANG]</span>
+                      <strong class="skill-name">C Programming</strong>
+                      <span class="skill-level-badge">LVL 85</span>
+                    </div>
+                    <div class="pixel-progress-track" title="C Programming Proficiency: 85%">
+                      <div class="pixel-progress-fill fill-green" style="--skill-pct: 85%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Memory Management, Pointers, Adaptive Systems</div>
+                  </div>
+
+                  <!-- Skill: Python (Represents scripting, automation, algorithms, and data science foundational workflows) -->
+                  <div class="skill-item" data-skill="python">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[PY]</span>
+                      <strong class="skill-name">Python</strong>
+                      <span class="skill-level-badge">LVL 82</span>
+                    </div>
+                    <div class="pixel-progress-track" title="Python Proficiency: 82%">
+                      <div class="pixel-progress-fill fill-gold" style="--skill-pct: 82%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Scripting, Data Science Concepts, Automation</div>
+                  </div>
+
+                  <!-- Skill: JavaScript (Represents dynamic scripting, ES6+ asynchronous capabilities, and web logic) -->
+                  <div class="skill-item" data-skill="javascript">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[JS]</span>
+                      <strong class="skill-name">JavaScript (ES6+)</strong>
+                      <span class="skill-level-badge">LVL 85</span>
+                    </div>
+                    <div class="pixel-progress-track" title="JavaScript Proficiency: 85%">
+                      <div class="pixel-progress-fill fill-gold" style="--skill-pct: 85%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Asynchronous JS, DOM APIs, Event Driven</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==================================================================
+               CATEGORY 2: FRONTEND DEVELOPMENT
+               Represents user interface structuring, responsive design, and
+               pixel-perfect styling systems.
+               ================================================================== -->
+            <article class="skill-category-card pixel-box" data-category="frontend">
+              <div class="pixel-box-titlebar">
+                <span class="pixel-window-title">CATEGORY // FRONTEND_ENGINEERING.EXE</span>
+                <span class="pixel-system-status"><span class="blinking-led">&#9679;</span> READY</span>
+              </div>
+
+              <div class="category-card-body">
+                <h3 class="category-title">Frontend Engineering</h3>
+                <p class="category-desc">Modern web interface design, responsive layouts, and interactive experiences.
+                </p>
+
+                <div class="skills-list">
+                  <!-- Skill: HTML5 (Represents semantic layout structure, accessibility attributes, and SEO foundation) -->
+                  <div class="skill-item" data-skill="html5">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[HTML5]</span>
+                      <strong class="skill-name">HTML5 Semantics</strong>
+                      <span class="skill-level-badge">LVL 95</span>
+                    </div>
+                    <div class="pixel-progress-track" title="HTML5 Proficiency: 95%">
+                      <div class="pixel-progress-fill fill-cyan" style="--skill-pct: 95%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Semantic Tags, Accessibility (ARIA), SEO</div>
+                  </div>
+
+                  <!-- Skill: CSS3 (Represents design system tokens, pixel art styling, animations, and custom UI components) -->
+                  <div class="skill-item" data-skill="css3">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[CSS3]</span>
+                      <strong class="skill-name">CSS3 &amp; Pixel Art</strong>
+                      <span class="skill-level-badge">LVL 90</span>
+                    </div>
+                    <div class="pixel-progress-track" title="CSS3 Proficiency: 90%">
+                      <div class="pixel-progress-fill fill-purple" style="--skill-pct: 90%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Custom Properties, Keyframe Animations, Grid/Flex</div>
+                  </div>
+
+                  <!-- Skill: Responsive Web Design (Represents fluid layouts, media queries, and mobile drawer interfaces) -->
+                  <div class="skill-item" data-skill="responsive">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[RESP]</span>
+                      <strong class="skill-name">Responsive Design</strong>
+                      <span class="skill-level-badge">LVL 90</span>
+                    </div>
+                    <div class="pixel-progress-track" title="Responsive Design Proficiency: 90%">
+                      <div class="pixel-progress-fill fill-green" style="--skill-pct: 90%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Mobile-First, Media Queries, Fluid Breakpoints</div>
+                  </div>
+
+                  <!-- Skill: UI & UX Craftsmanship (Represents micro-interactions, dark mode media queries, and accessibility) -->
+                  <div class="skill-item" data-skill="ui-ux">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[UI/UX]</span>
+                      <strong class="skill-name">UI &amp; Interaction</strong>
+                      <span class="skill-level-badge">LVL 82</span>
+                    </div>
+                    <div class="pixel-progress-track" title="UI/UX Proficiency: 82%">
+                      <div class="pixel-progress-fill fill-cyan" style="--skill-pct: 82%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Micro-Animations, Night Mode, User Delight</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==================================================================
+               CATEGORY 3: BACKEND & DATABASES
+               Represents server-side infrastructure, relational data modeling,
+               and RESTful API communication.
+               ================================================================== -->
+            <article class="skill-category-card pixel-box" data-category="backend">
+              <div class="pixel-box-titlebar">
+                <span class="pixel-window-title">CATEGORY // BACKEND_DATA.EXE</span>
+                <span class="pixel-system-status"><span class="blinking-led">&#9679;</span> READY</span>
+              </div>
+
+              <div class="category-card-body">
+                <h3 class="category-title">Backend &amp; Databases</h3>
+                <p class="category-desc">Server-side runtimes, relational database schema, and resilient network APIs.
+                </p>
+
+                <div class="skills-list">
+                  <!-- Skill: Node.js (Represents non-blocking server architecture, asynchronous runtime, and npm packages) -->
+                  <div class="skill-item" data-skill="nodejs">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[NODE]</span>
+                      <strong class="skill-name">Node.js</strong>
+                      <span class="skill-level-badge">LVL 82</span>
+                    </div>
+                    <div class="pixel-progress-track" title="Node.js Proficiency: 82%">
+                      <div class="pixel-progress-fill fill-green" style="--skill-pct: 82%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Event Loop, Non-blocking I/O, Package Ecosystem</div>
+                  </div>
+
+                  <!-- Skill: MySQL (Represents relational database modeling, structured querying, keys, and transaction integrity) -->
+                  <div class="skill-item" data-skill="mysql">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[MYSQL]</span>
+                      <strong class="skill-name">MySQL Database</strong>
+                      <span class="skill-level-badge">LVL 85</span>
+                    </div>
+                    <div class="pixel-progress-track" title="MySQL Proficiency: 85%">
+                      <div class="pixel-progress-fill fill-cyan" style="--skill-pct: 85%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Schema Design, Complex Queries, Normalization</div>
+                  </div>
+
+                  <!-- Skill: RESTful APIs (Represents HTTP endpoints, CRUD operations, middleware, and JSON contracts) -->
+                  <div class="skill-item" data-skill="rest">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[REST]</span>
+                      <strong class="skill-name">RESTful APIs</strong>
+                      <span class="skill-level-badge">LVL 84</span>
+                    </div>
+                    <div class="pixel-progress-track" title="RESTful APIs Proficiency: 84%">
+                      <div class="pixel-progress-fill fill-purple" style="--skill-pct: 84%;"></div>
+                    </div>
+                    <div class="skill-footer-note">CRUD Operations, Status Codes, JSON Formats</div>
+                  </div>
+
+                  <!-- Skill: Database Modeling (Represents entity relations, foreign keys, and query optimization) -->
+                  <div class="skill-item" data-skill="db-design">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[DATA]</span>
+                      <strong class="skill-name">Data Architecture</strong>
+                      <span class="skill-level-badge">LVL 80</span>
+                    </div>
+                    <div class="pixel-progress-track" title="Data Architecture Proficiency: 80%">
+                      <div class="pixel-progress-fill fill-gold" style="--skill-pct: 80%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Entity Relationships, Indexing, ACID Compliance</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==================================================================
+               CATEGORY 4: CORE CS & DEVELOPER TOOLS
+               Represents fundamental theoretical principles, algorithmic thinking,
+               version control, and environment tooling.
+               ================================================================== -->
+            <article class="skill-category-card pixel-box" data-category="tools">
+              <div class="pixel-box-titlebar">
+                <span class="pixel-window-title">CATEGORY // CORE_CS_TOOLS.EXE</span>
+                <span class="pixel-system-status"><span class="blinking-led">&#9679;</span> READY</span>
+              </div>
+
+              <div class="category-card-body">
+                <h3 class="category-title">Core CS &amp; Developer Tools</h3>
+                <p class="category-desc">Computer science fundamentals, operating systems, and developer workflow
+                  tooling.</p>
+
+                <div class="skills-list">
+                  <!-- Skill: Data Structures & Algorithms (Represents time/space complexity, sorting, trees, and logic solving) -->
+                  <div class="skill-item" data-skill="dsa">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[DSA]</span>
+                      <strong class="skill-name">Data Structures &amp; Algo</strong>
+                      <span class="skill-level-badge">LVL 88</span>
+                    </div>
+                    <div class="pixel-progress-track" title="DSA Proficiency: 88%">
+                      <div class="pixel-progress-fill fill-cyan" style="--skill-pct: 88%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Arrays, Trees, Graphs, Big-O Optimization</div>
+                  </div>
+
+                  <!-- Skill: Operating Systems (Represents process scheduling, memory allocation, threads, and system calls) -->
+                  <div class="skill-item" data-skill="os">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[OS]</span>
+                      <strong class="skill-name">Operating Systems</strong>
+                      <span class="skill-level-badge">LVL 82</span>
+                    </div>
+                    <div class="pixel-progress-track" title="Operating Systems Proficiency: 82%">
+                      <div class="pixel-progress-fill fill-green" style="--skill-pct: 82%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Processes, Threading, Virtual Memory, Deadlocks</div>
+                  </div>
+
+                  <!-- Skill: Git & GitHub (Represents distributed version control, branching strategies, and collaboration) -->
+                  <div class="skill-item" data-skill="git">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[GIT]</span>
+                      <strong class="skill-name">Git &amp; Version Control</strong>
+                      <span class="skill-level-badge">LVL 88</span>
+                    </div>
+                    <div class="pixel-progress-track" title="Git Proficiency: 88%">
+                      <div class="pixel-progress-fill fill-gold" style="--skill-pct: 88%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Branching, Merging, GitHub Workflows, Commits</div>
+                  </div>
+
+                  <!-- Skill: Linux & Dev Environment (Represents command line proficiency, shell navigation, and dev setups) -->
+                  <div class="skill-item" data-skill="linux">
+                    <div class="skill-header">
+                      <span class="skill-icon-badge" aria-hidden="true">[CLI]</span>
+                      <strong class="skill-name">Linux &amp; Developer CLI</strong>
+                      <span class="skill-level-badge">LVL 80</span>
+                    </div>
+                    <div class="pixel-progress-track" title="Linux & CLI Proficiency: 80%">
+                      <div class="pixel-progress-fill fill-purple" style="--skill-pct: 80%;"></div>
+                    </div>
+                    <div class="skill-footer-note">Terminal Commands, Scripting, Tooling Pipelines</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         SECTION: TIMELINE (EDUCATION & MAJOR PROJECTS)
+         Chronological progression of academic milestones, systems engineering,
+         and web projects with rounded cards and smooth CSS transitions
+         ====================================================================== -->
+      <section class="section timeline-section" id="timeline" aria-labelledby="timeline-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag-label">// CAREER_QUEST_LOG</span>
+            <h2 class="section-title" id="timeline-title">Journey &amp; Milestones</h2>
+            <p class="section-subtitle">Chronological progression of academic achievements, engineering research, and
+              major projects.</p>
+          </div>
+
+          <!-- Interactive Timeline Filters -->
+          <div class="timeline-filter-tabs" role="tablist" aria-label="Timeline Filters">
+            <button type="button" class="pixel-tab-btn active" role="tab" aria-selected="true"
+              data-timeline-filter="all">
+              <span class="tab-indicator">&#9654;</span> ALL MILESTONES
+            </button>
+            <button type="button" class="pixel-tab-btn" role="tab" aria-selected="false"
+              data-timeline-filter="education">
+              <span class="tab-indicator">&#9654;</span> EDUCATION
+            </button>
+            <button type="button" class="pixel-tab-btn" role="tab" aria-selected="false"
+              data-timeline-filter="projects">
+              <span class="tab-indicator">&#9654;</span> MAJOR PROJECTS
+            </button>
+          </div>
+
+          <!-- Vertical Timeline Track -->
+          <div class="timeline-container" id="timeline-container">
+
+            <!-- Entry 1: Current Undergraduate Degree (Education) -->
+            <article class="timeline-item" data-category="education">
+              <div class="timeline-marker marker-edu" aria-hidden="true">
+                <span class="marker-glyph">&#127891;</span>
+              </div>
+              <div class="timeline-card rounded-box">
+                <div class="timeline-card-header">
+                  <span class="timeline-badge badge-active">2025 &mdash; 2029 (IN PROGRESS)</span>
+                  <span class="timeline-type-pill pill-edu">[EDUCATION]</span>
+                </div>
+                <h3 class="timeline-title">B.E. in Computer Science &amp; Data Science</h3>
+                <h4 class="timeline-org">Adichunchanagiri Institute of Technology, Chikkamagaluru</h4>
+                <p class="timeline-text">
+                  Pursuing an undergraduate engineering degree focused on advanced computation, data modeling,
+                  algorithms, and distributed systems. Maintaining academic consistency with active hands-on laboratory
+                  implementation.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">CGPA: 7.0</span>
+                  <span class="timeline-tag">Data Structures &amp; Algorithms</span>
+                  <span class="timeline-tag">Operating Systems</span>
+                  <span class="timeline-tag">DBMS</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Entry 2: Adaptive Headlights Prototype (Major Project) -->
+            <article class="timeline-item" data-category="projects">
+              <div class="timeline-marker marker-proj" aria-hidden="true">
+                <span class="marker-glyph">&#9889;</span>
+              </div>
+              <div class="timeline-card rounded-box">
+                <div class="timeline-card-header">
+                  <span class="timeline-badge badge-highlight">2025 &mdash; 30 DAYS BUILD</span>
+                  <span class="timeline-type-pill pill-proj">[MAJOR PROJECT]</span>
+                </div>
+                <h3 class="timeline-title">Adaptive Vehicle Headlights System</h3>
+                <h4 class="timeline-org">Autonomous Systems Prototype &bull; C Language</h4>
+                <p class="timeline-text">
+                  Architected and programmed an embedded vehicle headlight safety prototype using C. The system
+                  dynamically adapts illumination, executing automated dimming and dipping based on oncoming ambient
+                  lighting conditions and curved roads to reduce nighttime collision risks.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Embedded C</span>
+                  <span class="timeline-tag">Sensor Automation</span>
+                  <span class="timeline-tag">Night Visibility</span>
+                  <span class="timeline-tag">Vehicle Safety</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Entry 3: Full-Stack Web Development & Data Architecture (Major Project) -->
+            <article class="timeline-item" data-category="projects">
+              <div class="timeline-marker marker-proj" aria-hidden="true">
+                <span class="marker-glyph">&#127760;</span>
+              </div>
+              <div class="timeline-card rounded-box">
+                <div class="timeline-card-header">
+                  <span class="timeline-badge">2024 &mdash; 2025</span>
+                  <span class="timeline-type-pill pill-proj">[MAJOR PROJECT]</span>
+                </div>
+                <h3 class="timeline-title">Full-Stack Application &amp; API Architecture</h3>
+                <h4 class="timeline-org">Web Platforms &bull; Node.js, MySQL, CSS Design System</h4>
+                <p class="timeline-text">
+                  Engineered full-stack web solutions integrating relational MySQL backends with responsive frontend
+                  architectures. Built RESTful API routes, implemented theme-aware interfaces, and optimized rendering
+                  performance across mobile and desktop devices.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Node.js</span>
+                  <span class="timeline-tag">MySQL Database</span>
+                  <span class="timeline-tag">RESTful APIs</span>
+                  <span class="timeline-tag">Pixel Art Design System</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Entry 4: Pre-University Course / 12th Grade (Education) -->
+            <article class="timeline-item" data-category="education">
+              <div class="timeline-marker marker-edu" aria-hidden="true">
+                <span class="marker-glyph">&#128218;</span>
+              </div>
+              <div class="timeline-card rounded-box">
+                <div class="timeline-card-header">
+                  <span class="timeline-badge">2023 &mdash; 2025</span>
+                  <span class="timeline-type-pill pill-edu">[EDUCATION]</span>
+                </div>
+                <h3 class="timeline-title">12th Grade / Pre-University Course (PUC Science)</h3>
+                <h4 class="timeline-org">Excel PU College, Mangalore</h4>
+                <p class="timeline-text">
+                  Completed pre-university education with distinction (85%). Focused on foundational sciences, advanced
+                  mathematics, physics, and introductory computer science fundamentals, establishing disciplined
+                  analytical thinking.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Score: 85% Distinction</span>
+                  <span class="timeline-tag">Mathematics</span>
+                  <span class="timeline-tag">Physics</span>
+                  <span class="timeline-tag">Pre-Engineering</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Entry 5: Secondary School / 10th Grade (Education) -->
+            <article class="timeline-item" data-category="education">
+              <div class="timeline-marker marker-edu" aria-hidden="true">
+                <span class="marker-glyph">&#127979;</span>
+              </div>
+              <div class="timeline-card rounded-box">
+                <div class="timeline-card-header">
+                  <span class="timeline-badge">2013 &mdash; 2023</span>
+                  <span class="timeline-type-pill pill-edu">[EDUCATION]</span>
+                </div>
+                <h3 class="timeline-title">10th Grade Secondary School Examination</h3>
+                <h4 class="timeline-org">BGS VS School, Mudigere, Chikkamagaluru</h4>
+                <p class="timeline-text">
+                  Graduated with 73%, active in science exhibitions and introductory logic clubs. Formed early passion
+                  for computer hardware, technology innovation, and creative problem solving.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Score: 73%</span>
+                  <span class="timeline-tag">Science &amp; Technology</span>
+                  <span class="timeline-tag">Foundation</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         SECTION: PROJECTS
+         Featured case studies and software engineering repositories with
+         real pixel-art styled thumbnails. Each card links to project detail.
+         ====================================================================== -->
+      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag-label">// FEATURED_BUILDS</span>
+            <h2 class="section-title" id="projects-title">Featured Projects</h2>
+            <p class="section-subtitle">A collection of software applications, architectures, and open-source
+              contributions.</p>
+          </div>
+
+          <!-- Projects Cards Grid: Each thumbnail links to project detail -->
+          <div class="projects-grid">
+
+            <!-- ==============================================================
+               Project Card 1: Cloud Monitoring Dashboard
+               Thumbnail shows a pixel-art dashboard; links to GitHub & demo
+               ============================================================== -->
+            <article class="project-card pixel-box" id="project-1">
+              <!-- Project thumbnail: clickable link to the live demo -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-thumb-link"
+                aria-label="Cloud Monitoring Dashboard – View project">
+                <div class="project-thumb-wrapper">
+                  <img src="project_thumb_dashboard.jpg"
+                    alt="Cloud Monitoring Dashboard – real-time server metrics in pixel art style" class="project-thumb"
+                    loading="lazy">
+                  <div class="project-thumb-overlay" aria-hidden="true">
+                    <span class="thumb-action-badge">&#9654; VIEW PROJECT</span>
+                  </div>
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-card-header">
+                  <span class="project-number-badge">[01]</span>
+                  <h3 class="project-title">Cloud Monitoring Dashboard</h3>
+                </div>
+                <p class="project-description">
+                  A real-time metrics visualizer for distributed servers and cloud containers with live alerts,
+                  customizable charts, and WebSocket communication.
+                </p>
+                <ul class="project-tags" aria-label="Technologies used">
+                  <li class="tag">React</li>
+                  <li class="tag">Node.js</li>
+                  <li class="tag">WebSockets</li>
+                  <li class="tag">Docker</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                    class="pixel-btn pixel-btn-secondary project-link-btn" id="project-1-github">&#128279; GitHub</a>
+                  <a href="https://example.com" target="_blank" rel="noopener noreferrer"
+                    class="pixel-btn pixel-btn-primary project-link-btn" id="project-1-demo">&#9654; Live Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==============================================================
+               Project Card 2: Microservices E-Commerce API
+               Thumbnail shows pixel-art API architecture; links to GitHub & API docs
+               ============================================================== -->
+            <article class="project-card pixel-box" id="project-2">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-thumb-link"
+                aria-label="Microservices E-Commerce API – View project">
+                <div class="project-thumb-wrapper">
+                  <img src="project_thumb_ecommerce.jpg"
+                    alt="Microservices E-Commerce API – pixel art architecture diagram" class="project-thumb"
+                    loading="lazy">
+                  <div class="project-thumb-overlay" aria-hidden="true">
+                    <span class="thumb-action-badge">&#9654; VIEW PROJECT</span>
+                  </div>
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-card-header">
+                  <span class="project-number-badge">[02]</span>
+                  <h3 class="project-title">Microservices E-Commerce API</h3>
+                </div>
+                <p class="project-description">
+                  Event-driven backend service architecture handling high-throughput product catalog search, payment
+                  gateway integration, and order management.
+                </p>
+                <ul class="project-tags" aria-label="Technologies used">
+                  <li class="tag">Node.js</li>
+                  <li class="tag">PostgreSQL</li>
+                  <li class="tag">Redis</li>
+                  <li class="tag">RabbitMQ</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                    class="pixel-btn pixel-btn-secondary project-link-btn" id="project-2-github">&#128279; GitHub</a>
+                  <a href="https://example.com" target="_blank" rel="noopener noreferrer"
+                    class="pixel-btn pixel-btn-primary project-link-btn" id="project-2-docs">&#9654; API Docs</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==============================================================
+               Project Card 3: Developer Productivity CLI
+               Thumbnail shows pixel-art terminal; links to GitHub & npm
+               ============================================================== -->
+            <article class="project-card pixel-box" id="project-3">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-thumb-link"
+                aria-label="Developer Productivity CLI – View project">
+                <div class="project-thumb-wrapper">
+                  <img src="project_thumb_cli.jpg" alt="Developer Productivity CLI – pixel art terminal tool"
+                    class="project-thumb" loading="lazy">
+                  <div class="project-thumb-overlay" aria-hidden="true">
+                    <span class="thumb-action-badge">&#9654; VIEW PROJECT</span>
+                  </div>
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-card-header">
+                  <span class="project-number-badge">[03]</span>
+                  <h3 class="project-title">Developer Productivity CLI</h3>
+                </div>
+                <p class="project-description">
+                  Cross-platform command-line tool streamlining git workflows, repository scaffolding, and automated
+                  code review formatting.
+                </p>
+                <ul class="project-tags" aria-label="Technologies used">
+                  <li class="tag">TypeScript</li>
+                  <li class="tag">Node CLI</li>
+                  <li class="tag">Jest</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                    class="pixel-btn pixel-btn-secondary project-link-btn" id="project-3-github">&#128279; GitHub</a>
+                  <a href="https://example.com" target="_blank" rel="noopener noreferrer"
+                    class="pixel-btn pixel-btn-primary project-link-btn" id="project-3-npm">&#9654; NPM Package</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         SECTION: VIDEO HIGHLIGHT
+         Portfolio introduction video embedded responsively in pixel art frame.
+         The video serves as an introduction to the software engineer's work
+         and personality, enhancing engagement with a multimedia touch.
+         ====================================================================== -->
+      <section class="section video-section" id="video-highlight" aria-labelledby="video-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag-label">// PORTFOLIO_REEL</span>
+            <h2 class="section-title" id="video-title">Introduction Video</h2>
+            <p class="section-subtitle">A personal introduction to my engineering journey, development philosophy, and
+              the projects I'm most proud of.</p>
+          </div>
+
+          <!-- Responsive video container: pixel art framing with aspect-ratio technique -->
+          <div class="video-showcase-wrapper pixel-box" id="video-showcase">
+            <div class="pixel-box-titlebar">
+              <div class="pixel-window-controls" aria-hidden="true">
+                <span class="pixel-dot dot-red"></span>
+                <span class="pixel-dot dot-yellow"></span>
+                <span class="pixel-dot dot-green"></span>
+              </div>
+              <span class="pixel-window-title">PORTFOLIO_REEL.MP4 // DAIVIK_K_P</span>
+              <span class="pixel-system-status"><span class="blinking-led">&#9679;</span> PLAY</span>
+            </div>
+
+            <!-- Video responsive container using aspect-ratio for proper sizing -->
+            <div class="video-responsive-container">
+              <!-- Portfolio highlight intro video; responsive using aspect-ratio CSS -->
+              <video class="portfolio-video" id="portfolio-intro-video" controls preload="metadata"
+                poster="daivikkp prof picture.jpeg" aria-label="Daivik K P's portfolio introduction video">
+                <source src="introduction vidio daivikkp.mp4" type="video/mp4">
+                <!-- Fallback message for browsers that don't support HTML5 video -->
+                <p class="video-fallback-msg">Your browser doesn't support HTML5 video. <a
+                    href="introduction vidio daivikkp.mp4">Download the video</a> to watch.</p>
+              </video>
+            </div>
+
+            <!-- Video caption describing the content -->
+            <div class="video-caption">
+              <span class="video-caption-icon" aria-hidden="true">&#127916;</span>
+              <p class="video-caption-text">
+                <strong>About this video:</strong> A personal portfolio introduction by Daivik K P, covering engineering
+                background, key technical skills, featured projects (Adaptive Vehicle Headlight System, Full-Stack Web
+                Applications), and career aspirations as a software engineer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         SECTION: TESTIMONIALS
+         Endorsements, recommendations, and reviews styled as RPG quest reviews
+         ====================================================================== -->
+      <section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" id="testimonials-title">Testimonials</h2>
+            <p class="section-subtitle">What engineering leaders, teammates, and clients say about building software
+              with me.</p>
+          </div>
+
+          <!-- Placeholder: Testimonial Cards Grid -->
+          <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar-badge" aria-hidden="true">[DEV_LEAD]</div>
+                <div class="testimonial-meta">
+                  <h3 class="testimonial-author">Alex Morgan</h3>
+                  <span class="testimonial-role">Senior Engineering Manager</span>
+                </div>
+                <div class="pixel-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <p class="testimonial-quote">
+                "Daivik has an exceptional ability to turn complex architectural challenges into clean, performant, and
+                reliable code. His attention to system resilience and user interface craftsmanship is outstanding."
+              </p>
+            </article>
+
+            <!-- Testimonial 2 -->
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar-badge" aria-hidden="true">[ARCHITECT]</div>
+                <div class="testimonial-meta">
+                  <h3 class="testimonial-author">Sarah Jenkins</h3>
+                  <span class="testimonial-role">Staff Full-Stack Architect</span>
+                </div>
+                <div class="pixel-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <p class="testimonial-quote">
+                "Collaborating with Daivik on distributed services was fantastic. He consistently delivers scalable
+                APIs, clean relational models, and detailed technical documentation."
+              </p>
+            </article>
+
+            <!-- Testimonial 3 -->
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar-badge" aria-hidden="true">[PROD_LEAD]</div>
+                <div class="testimonial-meta">
+                  <h3 class="testimonial-author">David Chen</h3>
+                  <span class="testimonial-role">Principal Product Designer</span>
+                </div>
+                <div class="pixel-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <p class="testimonial-quote">
+                "Daivik bridges backend logic and frontend design seamlessly. He doesn't just write code; he builds
+                intuitive products with flawless interactions and pixel-perfect attention to detail."
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         SECTION: CHAT
+         Interactive retro terminal & chat interface for visitors
+         ====================================================================== -->
+      <section class="section chat-section" id="chat" aria-labelledby="chat-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" id="chat-title">Terminal Chat</h2>
+            <p class="section-subtitle">Drop a real-time message into the terminal or ask a question about projects and
+              experience.</p>
+          </div>
+
+          <div class="chat-terminal-box pixel-box">
+            <div class="pixel-box-titlebar">
+              <div class="pixel-window-controls" aria-hidden="true">
+                <span class="pixel-dot dot-red"></span>
+                <span class="pixel-dot dot-yellow"></span>
+                <span class="pixel-dot dot-green"></span>
+              </div>
+              <span class="pixel-window-title">TERMINAL_CHAT // DAIVIK_ASSISTANT.EXE</span>
+              <span class="pixel-system-status"><span class="blinking-led">&#9679;</span> CONNECTED</span>
+            </div>
+
+            <div class="terminal-chat-body" id="chat-messages-container" aria-live="polite">
+              <div class="chat-message system-msg">
+                <span class="msg-sender">[SYSTEM]:</span>
+                <span class="msg-text">Connection established. Port 8080 open. Welcome to Daivik's live terminal
+                  chat!</span>
+              </div>
+              <div class="chat-message bot-msg">
+                <span class="msg-sender">[DAIVIK_BOT]:</span>
+                <span class="msg-text">Hey there! Feel free to ask about my recent projects, tech stack, or leave a
+                  message. I'll respond promptly!</span>
+              </div>
+            </div>
+
+            <form class="terminal-chat-input-row" id="terminal-chat-form">
+              <label for="chat-input" class="chat-input-prompt">&gt;</label>
+              <input type="text" id="chat-input" class="chat-input"
+                placeholder="Type a message or command (e.g. 'hello', 'skills', 'hire')..." autocomplete="off" required>
+              <button type="submit" class="pixel-btn pixel-btn-primary chat-send-btn" id="chat-send-btn">
+                SEND <span class="pixel-btn-icon">&#9654;</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         SECTION: CONTACT
+
+         Contact form, direct messaging options, and social coordinates
+         ====================================================================== -->
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" id="contact-title">Get In Touch</h2>
+            <p class="section-subtitle">Interested in collaborating or discussing an opportunity? Feel free to reach
+              out.</p>
+          </div>
+
+          <div class="contact-wrapper">
+            <!-- Contact Details / Social Links -->
+            <div class="contact-details">
+              <h3>Let's Connect</h3>
+              <p>I am always open to exploring new engineering challenges, collaborative projects, or full-time
+                opportunities. Reach out directly — I respond promptly!</p>
+              <ul class="contact-list">
+                <!-- Real email: opens mail client directly -->
+                <li>
+                  <span class="contact-icon" aria-hidden="true">&#9993;</span>
+                  <strong>Email:</strong>
+                  <a href="mailto:daivikkp007@gmail.com" id="contact-email-link">daivikkp007@gmail.com</a>
+                </li>
+                <!-- Phone number: clickable tel link -->
+                <li>
+                  <span class="contact-icon" aria-hidden="true">&#128222;</span>
+                  <strong>Phone:</strong>
+                  <a href="tel:+918660397414" id="contact-phone-link">+91 86603 97414</a>
+                </li>
+                <!-- Real GitHub profile link -->
+                <li>
+                  <span class="contact-icon" aria-hidden="true">&#128279;</span>
+                  <strong>GitHub:</strong>
+                  <a href="https://github.com/daivikkp007-cell" target="_blank" rel="noopener noreferrer"
+                    id="contact-github-link">github.com/daivikkp007-cell</a>
+                </li>
+                <!-- Real LinkedIn profile link -->
+                <li>
+                  <span class="contact-icon" aria-hidden="true">&#128101;</span>
+                  <strong>LinkedIn:</strong>
+                  <a href="https://www.linkedin.com/in/daivikkp-gowda-4b11433a0" target="_blank"
+                    rel="noopener noreferrer" id="contact-linkedin-link">linkedin.com/in/daivikkp-gowda</a>
+                </li>
+              </ul>
+
+              <!-- Quick-action social buttons -->
+              <div class="contact-social-actions">
+                <a href="mailto:daivikkp007@gmail.com" class="pixel-btn pixel-btn-primary contact-action-btn"
+                  id="btn-email-me">
+                  <span class="pixel-btn-icon">&#9993;</span> EMAIL ME
+                </a>
+                <a href="https://github.com/daivikkp007-cell" target="_blank" rel="noopener noreferrer"
+                  class="pixel-btn pixel-btn-secondary contact-action-btn" id="btn-github-profile">
+                  <span class="pixel-btn-icon">&#128279;</span> GITHUB
+                </a>
+                <a href="https://www.linkedin.com/in/daivikkp-gowda-4b11433a0" target="_blank" rel="noopener noreferrer"
+                  class="pixel-btn pixel-btn-accent contact-action-btn" id="btn-linkedin-profile">
+                  <span class="pixel-btn-icon">&#128101;</span> LINKEDIN
+                </a>
+              </div>
+            </div>
+
+            <!-- Placeholder: Contact Form -->
+            <form class="contact-form" id="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" name="name" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" required placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" required
+                  placeholder="Write your message here..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="btn-submit-contact">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ==========================================================================
+       FOOTER
+       Copyright statement, quick navigation links, and back-to-top anchor
+       ========================================================================== -->
+    <footer class="site-footer" id="site-footer">
+      <div class="container footer-container">
+        <div class="footer-left">
+          <p class="copyright-text">&copy; 2026 Daivik K P. Built with semantic HTML &amp; modern web standards.</p>
+        </div>
+
+        <div class="footer-center">
+          <!-- Footer social links with real profile URLs -->
+          <ul class="footer-social-links" aria-label="Social Profiles">
+            <li><a href="https://github.com/daivikkp007-cell" target="_blank" rel="noopener noreferrer"
+                id="footer-github">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/daivikkp-gowda-4b11433a0" target="_blank" rel="noopener noreferrer"
+                id="footer-linkedin">LinkedIn</a></li>
+            <li><a href="mailto:daivikkp007@gmail.com" id="footer-email">Email Me</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <!-- Back to Top Link -->
+          <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top of page">&uarr; Back to Top</a>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- /.site-layout -->
+
+  <!-- Script Reference (Vanilla JS for interactive logic like night mode toggle) -->
+  <script src="script.js"></script>
+</body>
+
+</html>
